@@ -1,5 +1,6 @@
 package ecommerce;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import Color.util.Cores;
@@ -45,7 +46,11 @@ public class Menu {
 				System.out.println("*****************************************************");
 				System.out.println("Entre com a opção desejada:                          ");
 				System.out.println("                                                     ");
-
+				try {
+					
+				
+				
+				
 				opcao = leia.nextInt();
 				
 				switch (opcao) {
@@ -90,12 +95,14 @@ public class Menu {
 	                leia.close();
 				default:
 					
-					//System.out.println("Essa opção não existe!");
+					System.out.println("Essa opção não existe!");
 					break;
 					
 			}
-			
-
+		 }catch (InputMismatchException e) {
+			 System.err.println(Cores.TEXT_RESET + "\nDigite valores válidos!");
+			 leia.nextLine();
+		 }
 		}
 
 	}
