@@ -33,7 +33,9 @@ public class Caneta extends Papelaria
 	
 	public void visualizar () {
 		super.visualizar();
-		System.out.println();
+		System.out.println(ponta);
+		System.out.println(Cor);
+		System.out.println(fabricante);
 	}
 
 	

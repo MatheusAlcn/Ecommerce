@@ -3,10 +3,10 @@ package ecommerce.model;
 public class Caderno extends Papelaria
 {
 	private int numero;
-	private int folha;
+	private String folha;
 	private int tamanho;
 	
-	public Caderno(int produtoId, String nome, double preco, int numero, int folha, int tamanho) {
+	public Caderno(int produtoId, String nome, double preco, int numero, String folha, int tamanho) {
 		super(produtoId, nome, preco);
 		this.numero = numero;
 		this.folha = folha;
@@ -21,11 +21,11 @@ public class Caderno extends Papelaria
 		this.numero = numero;
 	}
 
-	public int getFolha() {
+	public String getFolha() {
 		return folha;
 	}
 
-	public void setFolha(int folha) {
+	public void setFolha(String folha) {
 		this.folha = folha;
 	}
 
@@ -39,7 +39,9 @@ public class Caderno extends Papelaria
 	
 	public void visualizar() {
 		super.visualizar();
-		System.out.println();
+		System.out.println(tamanho);
+		System.out.println(folha);
+		System.out.println(numero);
 	}
 		
 

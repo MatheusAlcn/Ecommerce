@@ -11,8 +11,12 @@ public abstract class Papelaria
             this.produtoId = produtoId;
             this.nome = nome;
             this.preco = preco;
+            
         }
-
+        public Papelaria() {
+        	
+        }
+        
         public int getProdutoId() {
             return produtoId;
         }
@@ -38,7 +42,9 @@ public abstract class Papelaria
         }
 
 		public void visualizar() {
-			System.out.println();
+			System.out.println(produtoId);
+			System.out.println(nome);
+			System.out.println(preco);
 		}
 		
 }
